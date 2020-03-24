@@ -7,16 +7,21 @@
     <title >chrome easter egg: t-rex runner</title>
     <link rel="stylesheet" href="index.css">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet"> 
-    <script src="index.js"></script>
+    <script src="index_ug.js"></script>
 </head>
 
 <body id="t" class="offline">
     <div id="messageBox" class="sendmessage">
          <div class="niokbutton" onclick="okbuttonsend()"></div>
+				 <h1 style="text-align: center;font-family: 'Open Sans', sans-serif;">PUT YOUR SINGLE ID : <input style="text-align: center;font-family: 'Open Sans', sans-serif;" type="text" id="single_id"/></h1>
+				 <h1 style="text-align: center;font-family: 'Open Sans', sans-serif;">AND PUSH SPACE TO START</h1>
+				 </h1>
     </div>
     <div id="main-frame-error" class="interstitial-wrapper">
         <div id="main-content">
             <div class="icon icon-offline" alt=""></div>
+						<div id="single_id_show"></div>
+						<div id="output_data"></div>
         </div>
         <div id="offline-resources">
             <img id="offline-resources-1x" src="assets/default_100_percent/100-offline-sprite.png">
@@ -29,15 +34,5 @@
         </div>
     </div>
 </body>
-
-<script>
-    document.onkeydown = function(evt) {
-    evt = evt || window.event;
-    if (evt.keyCode == 32) {
-        var box = document.getElementById("messageBox");
-        box.style.visibility="hidden";
-    }
-};
-</script>
     
 </html>
